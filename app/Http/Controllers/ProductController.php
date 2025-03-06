@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function index(){
-        echo "LISTADO DE TODOS LOS PRODUCTOS";
+        return view('products.index'); //retornar un listado de productos
     }
 
     public function create(){
