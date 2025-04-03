@@ -59,47 +59,15 @@
 @section('content')
     <h2>Nuestros Productos</h2>
     <div class="productos-container">
-        <div class="producto">
-            <img src="imagen1.png" alt="Producto 1">
-            <h3>Producto 1</h3>
-            <p>Categoría: Electrónica</p>
-            <p class="precio">$99.99</p>
-            <button>Agregar al Carrito</button>
-        </div>
-        <div class="producto">
-            <img src="imagen2.png" alt="Producto 2">
-            <h3>Producto 2</h3>
-            <p>Categoría: Libros</p>
-            <p class="precio">$49.99</p>
-            <button>Agregar al Carrito</button>
-        </div>
-        <div class="producto">
-            <img src="imagen3.png" alt="Producto 3">
-            <h3>Producto 3</h3>
-            <p>Categoría: Ropa</p>
-            <p class="precio">$29.99</p>
-            <button>Agregar al Carrito</button>
-        </div>
-        <div class="producto">
-            <img src="imagen4.png" alt="Producto 4">
-            <h3>Producto 4</h3>
-            <p>Categoría: Electrónica</p>
-            <p class="precio">$199.99</p>
-            <button>Agregar al Carrito</button>
-        </div>
-        <div class="producto">
-            <img src="imagen5.png" alt="Producto 5">
-            <h3>Producto 5</h3>
-            <p>Categoría: Libros</p>
-            <p class="precio">$59.99</p>
-            <button>Agregar al Carrito</button>
-        </div>
-        <div class="producto">
-            <img src="imagen6.png" alt="Producto 6">
-            <h3>Producto 6</h3>
-            <p>Categoría: Ropa</p>
-            <p class="precio">$39.99</p>
-            <button>Agregar al Carrito</button>
-        </div>
+
+        @foreach ($listProducts as $product)
+            <div class="producto">
+                <img src="{{$product->url_image}}" alt="Producto 1">
+                <h3>{{$product->name}}</h3>
+                <p>Categoría: {{$product->category_id}}</p>
+                <p class="precio">{{$product->price}}</p>
+                <button>Agregar al Carrito</button>
+            </div>
+        @endforeach
     </div>
 @endsection

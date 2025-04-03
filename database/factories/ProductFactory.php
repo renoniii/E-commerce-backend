@@ -6,12 +6,10 @@ use App\Models\category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Category>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class CategoryFactory extends Factory
+class ProductFactory extends Factory
 {
-
-    protected $model = category::class;
     /**
      * Define the model's default state.
      *
@@ -22,6 +20,9 @@ class CategoryFactory extends Factory
         return [
             'name' =>fake()->sentence(),
             'description' => fake()->paragraph(),
+            'price' => fake()->randomFloat(2,10000,3000000),
+            'category_id' => category::inRandomOrder()->first()->id,
+            'url_image' => fake()->imageUrl(640,400,'products',true)
         ];
     }
 }
