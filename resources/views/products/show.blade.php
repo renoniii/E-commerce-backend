@@ -49,13 +49,13 @@
 @section('content')
     <div class="product-container">
         <div class="product-image">
-            <img src="producto.png" alt="Producto" width="100%">
+            <img src={{$product->url_image}} alt="Producto" width="100%">
         </div>
         <div class="product-info">
-            <h1>Nombre del Producto</h1>
-            <p><strong>Categoría:</strong> Electrónica</p>
-            <p>Descripción del producto. Este es un producto increíble con características únicas que lo hacen destacar en el mercado. Perfecto para cualquier ocasión.</p>
-            <p class="price">$99.99</p>
+            <h1>{{$product->name}}</h1>
+            <p><strong>Categoría:</strong>{{$product->category_id}}</p>
+            <p>{{$product->description}}</p>
+            <p class="price">{{$product->price}}</p>
             <button class="btn">Agregar al Carrito</button>
         </div>
     </div>

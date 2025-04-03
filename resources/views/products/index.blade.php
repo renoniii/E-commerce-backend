@@ -69,5 +69,8 @@
                 <button>Agregar al Carrito</button>
             </div>
         @endforeach
+
+        {{$listProducts->links()}}
+        
     </div>
 @endsection
