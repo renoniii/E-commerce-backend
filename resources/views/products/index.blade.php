@@ -58,8 +58,8 @@
 
 @section('content')
     <h2>Nuestros Productos</h2>
+    
     <div class="productos-container">
-
         @foreach ($listProducts as $product)
             <div class="producto">
                 <img src="{{$product->url_image}}" alt="Producto 1">
@@ -69,8 +69,10 @@
                 <button>Agregar al Carrito</button>
             </div>
         @endforeach
+    </div>
 
-        {{$listProducts->links()}}
-        
+    <!-- Paginación fuera del contenedor de productos -->
+    <div class="d-flex justify-content-center mt-4">
+        {{ $listProducts->links() }}
     </div>
 @endsection
