@@ -1,0 +1,35 @@
+.input-group-text {
+    background-color: #f29f05;
+    border: none;
+    width: 20px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #ccc;
+}
+
+.btn-orange {
+    background-color: #f29f05;
+    color: white;
+}
+
+.btn-orange:hover {
+    background-color: #e19100;
+}
+
+.card-auth {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.card-header-auth {
+    background-color: #f29f05;
+    color: white;
+    font-weight: 600;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
